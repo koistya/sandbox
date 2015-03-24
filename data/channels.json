@@ -1,0 +1,10 @@
+[
+  {
+    "id": "default",
+    "name": "Channel A (default)"
+  },
+  {
+    "id": "test",
+    "name": "Channel B (test)"
+  }
+]
