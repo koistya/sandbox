@@ -22,8 +22,7 @@ gulp.task('build', function() {
   return gulp.src('src/index.html')
     .pipe($.replace(
       '<!--settings-->',
-      'var App = App || {};' +
-      'App.channel = ' + JSON.stringify(data.channel) + ';'))
+      'angular.constant(\'channel\', ' + JSON.stringify(data.channel) + ');'))
     .pipe(gulp.dest('build'));
 });
 
