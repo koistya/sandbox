@@ -18,7 +18,7 @@ var data = (function() {
   return {channel: channel};
 }());
 
-gulp.task('default', function() {
+gulp.task('build', function() {
   return gulp.src('src/index.html')
     .pipe($.replace(
       '<!--settings-->',
@@ -26,3 +26,5 @@ gulp.task('default', function() {
       'App.channel = ' + JSON.stringify(data.channel) + ';'))
     .pipe(gulp.dest('build'));
 });
+
+gulp.task('default', ['build']);
